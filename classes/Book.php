@@ -1,5 +1,4 @@
 <?php
-include('../dbconnect.php');
   class Book{
     public $connection;
     public $id;
@@ -83,19 +82,4 @@ include('../dbconnect.php');
       public function delete_book(){}
 
   }
-
-
-  $title        = "More Income Less Stress";
-  $author       = "Dave Hershman";
-  $isbn_13      = "";
-  $isbn_10      = "0-9710346-0-5";
-  $publisher    = "The Hershman Group";
-  $image_url    = "";
-  $category     = "Sales and Marketing";
-
-  $newbook = new Book($connection, $title, $author, $isbn_13, $isbn_10, $publisher, $image_url, $category);
-  echo('<pre>');
-  print_r($newbook);
-  echo('</pre>');
-  $newbook->add_book();
  ?>
